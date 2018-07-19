@@ -1,0 +1,93 @@
+body{
+    background: #ebebeb;
+}
+
+.table{
+    margin-top: 0.5em;
+    background: #ffffff;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 1.2em;
+}
+
+.actionInfo{
+    width: 100%;
+}
+
+.customNav{
+    background: #2a2a2a;
+    margin-bottom: 1em;
+
+}
+
+.img-container {
+    margin-top: 0.5em;
+    margin-left: 1em;
+    height: auto;
+    width: auto;
+    max-width: 70px;
+    max-height: 200px;
+}
+
+.menu-container {
+    margin-left: 0.7em;
+    margin-top: 0.35em;
+    color: #eeeeee;
+    height: auto;
+    width: auto;
+    max-width: 55%;
+    max-height: 55%;
+}
+
+.userText{
+    margin-left: 30px;
+    color: #fff;
+}
+
+.infoblock{
+    width: auto;
+    display: inline-block;
+}
+
+.dateinfo{
+    display: inline-block;
+    position: absolute;
+    right:0.7em
+}
+
+
+.klass{
+    margin-left: 1em;
+}
+
+.user_enter,
+.user_exit{
+    position: relative
+}
+
+.with-header
+{
+    min-height: 0px;
+    height: 62px;
+    border: none;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+th{
+    font-size:1.3em; padding: 5px 5px
+}
+
+
+/*
+DateHR
+*/
+
+.dateline{
+    width: 40%;
+    display: inline-block
+}
+
+.datehr{
+    display: flex;
+    align-items: center
+}

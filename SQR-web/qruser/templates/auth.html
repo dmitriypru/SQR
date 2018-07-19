@@ -1,0 +1,38 @@
+{% load staticfiles  %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css '%}"  media="screen,projection"/>
+
+        <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+    </head>
+    <body>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
+        <img src="http://i.imgur.com/KMjdZqN.png" class="img-logo"/>
+        <h1>Авторизация</h1>
+        <div class="forms">
+            <div class="row">
+                <form action="" method="post">
+                    {% csrf_token %}
+                     <div class="row">
+                        <div class="input-field col s12">
+                            {{ form.username }}
+                            <label for="username">Логин</label>
+                        </div>
+                        <div class="input-field col s12 last">
+                            {{ form.password }}
+                            <label for="password">Пароль</label>
+                        </div>
+                    </div>
+                    <div class="row" style="width: 380px">
+                        <a href="{% url 'register' %}" class=" col s5 btn btn-large grey darken-3">Регистрация</a>
+                        <button class="push-s2 col s5 btn btn-large grey darken-3" type="submit" name="action">Войти</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+{% load staticfiles  %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+        <link rel="stylesheet" href="{% static 'css/register.css' %}">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+        <script type="text/javascript" src="{% static 'js/register.js' %}"></script>
+    </head>
+    <body>
+        <img src="http://i.imgur.com/KMjdZqN.png" class="img-logo"/>
+        <div class="forms">
+            <div class="row">
+                <h3>Регистрация</h3>
+                <form action="" method="post">
+                    {% csrf_token %}
+                     <div class="row">
+                        <div class="input-field col s6">
+                            {{ form.username }}
+                            <label for="username">Логин</label>
+                        </div>
+                        <div class="input-field col s6">
+                            {{ form.email }}
+                            <label for="email" >Почта</label>
+
+                        </div>
+                         <div class="input-field col s6">
+                            {{ form.first_name }}
+                            <label for="first_name">Имя</label>
+                        </div>
+                        <div class="input-field col s6">
+                            {{ form.last_name }}
+                            <label for="last_name">Фамилия</label>
+                        </div>
+                        <div class="input-field col s6">
+                            {{ form.password }}
+                            <label for="password">Пароль</label>
+                        </div>
+                        <div class="input-field col s6">
+                            {{ form.repass }}
+                            <label for="repass">Подтверждение пароля</label>
+                        </div>
+                        <div class="input-field col s6 grey-text">
+                            {{ form.school }}
+                            <label></label>
+                        </div>
+                        <div class="input-field col s6">
+                            {{ form.klass }}
+                            <label for="klass">Класс</label>
+                        </div>
+                     </div>
+                    <button class="btn btn-large grey darken-3" type="submit" name="action">
+                        Зарегестрироваться
+                    </button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

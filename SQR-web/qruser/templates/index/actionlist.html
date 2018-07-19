@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="user_exit col s6">
+                <table>
+                        <thead>
+                              <tr>
+                                  <th>Вход</th>
+                              </tr>
+                        </thead>
+                </table>
+                {%  for action in actions %}
+                    {% if action.is_come_in %}
+                            <ul class="collection with-header z-depth-1">
+                                <li class="collection-item avatar">
+                                    <img src="http://static-service.prweb.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png?x75704" alt="" class="circle">
+                                    <span class="title infoblock"><b>{{ action.user.last_name }}</b> <br>{{ action.user.first_name }}<b class="klass">{{ action.user.school_klass }}-{{ action.user.school_klass_litera }}</b></span>
+                                    <span class="dateinfo"><b>{{ action.date_time|date:'H:i:s' }}</b><br>{{ action.date_time|date:'d-m-y' }}</span>
+                                </li>
+                            </ul>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+             <div class="user_exit col s6">
+                 <table>
+                      <thead>
+                          <tr>
+                              <th>Выход</th>
+                          </tr>
+                    </thead>
+                </table>
+                {%  for action in actions %}
+                    {% if not action.is_come_in %}
+                            <ul class="collection with-header z-depth-1">
+                                <li class="collection-item avatar">
+                                    <img src="http://static-service.prweb.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png?x75704" alt="" class="circle">
+                                    <span class="title infoblock"><b>{{ action.user.last_name }}</b> <br>{{ action.user.first_name }}<b class="klass">{{ action.user.school_klass }}-{{ action.user.school_klass_litera }}</b></span>
+                                    <span class="dateinfo"><b>{{ action.date_time|date:'H:i:s' }}</b><br>{{ action.date_time|date:'d-m-y' }}</span>
+                                </li>
+                            </ul>
+                    {% endif %}
+                {% endfor %}
+             </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,100 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background: #202020;
+}
+
+
+.img-logo{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10em;
+    margin-bottom: 3em;
+
+}
+
+div.sp-pp .container {
+    font-family: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0px 16px 40px 16px;
+    text-align: center;
+}
+
+h3 {
+  color: #fff;
+  font-family: "Roboto Thin", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.forms{
+    width: 800px;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn{
+    display: block;
+    margin: 0 auto;
+}
+
+
+.input-field{
+    color: #ebebeb;
+}
+/* label color */
+.input-field label {
+ color: #9e9e9e   ;
+}
+/* label focus color */
+.input-field input[type=text]:focus  + label {
+ color: #eeeeee  ;
+}
+.input-field input[type=email]:focus  + label {
+ color: #eeeeee  ;
+}
+.input-field input[type=password]:focus  + label {
+ color: #eeeeee  ;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #eeeeee;
+ box-shadow: 0 1px 0 0 #eeeeee;
+}
+.input-field input[type=email]:focus {
+ border-bottom: 1px solid #eeeeee;
+ box-shadow: 0 1px 0 0 #eeeeee;
+}
+.input-field input[type=password]:focus {
+ border-bottom: 1px solid #eeeeee;
+ box-shadow: 0 1px 0 0 #eeeeee;
+}
+/* valid color */
+.input-field input.valid{
+ color: #424242;
+ border-bottom: 1px solid #008000;
+ box-shadow: 0 1px 0 0 #008000;
+}
+/* invalid color */
+.input-field input.invalid {
+ border-bottom: 1px solid #911616;
+ box-shadow: 0 1px 0 0 #911616;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+ color: #111;
+}
+
+.emailError{
+    color: red;
+}
+
+.dropdown-content li>span{
+    color: #333333;
+}

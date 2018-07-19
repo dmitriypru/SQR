@@ -1,0 +1,40 @@
+{% load staticfiles %}
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta http-equiv="refresh" content="2">
+</head>
+<body>
+    <nav class="customNav">
+        <div class="nav-wrapper z-depth-1">
+            <a href="" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons"><img src="http://i.imgur.com/9vAOJgE.png" class="menu-container"></i></a>
+            <a href="#" class="brand-logo"><img src="http://i.imgur.com/KMjdZqN.png" class="img-container"></a>
+        </div>
+        <ul id="slide-out" class="side-nav">
+           <li>
+            <div class="userView">
+                <p class="user-name" ><span class="red-text name userText">В РАЗРАБОТКЕ</span></p>
+                <p class="user-name" ><span class="black-text name userText">Имя: {{ user.first_name }}</span></p>
+                <p class="user-name" ><span class="black-text name userText">Фамилия: {{ user.last_name }}</span></p>
+                <p class="user-email"><span class="black-text email userText">Школа: {{ user.school_name }}</span></p>
+                <p class="user-email"><span class="black-text email userText">Класс: {{ user.school_klass }}-{{ user.school_klass_litera }}</span></p>
+            </div>
+           </li>
+          <li><a href="{% url 'log_out' %}">Выйти</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="{% static 'js/sidenav.js' %}"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</body>
+</html>
