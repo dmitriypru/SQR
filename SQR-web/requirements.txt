@@ -1,9 +1,0 @@
-Django==1.10.7
-django-hosts==2.0
-django-material==1.0.0
-djangorestframework==3.6.3
-gunicorn==19.7.1
-pyotp==2.2.6
-whitenoise==3.3.0
-psycopg2
-dj-database-url
